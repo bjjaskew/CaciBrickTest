@@ -26,7 +26,7 @@ public class OrderController {
 
     @RequestMapping(value = "/{ID}", method = RequestMethod.PUT)
     public String modifyOrder(@PathVariable String ID, @RequestBody String noBricks) {
-        return "Reference Number: #" + orderImpl.modifyOrder(ID, noBricks).getId();
+        return orderImpl.modifyOrder(ID, noBricks).getId();
     }
 
     @RequestMapping(method = RequestMethod.POST)
